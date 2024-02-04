@@ -14,7 +14,7 @@ This application allows users to search for any city in the United States and gi
 
 ## How to run
 
-1. Start your Docker processes via Sail command `./vendor/bin/sail up`.
+1. Start your Docker processes with Sail command `./vendor/bin/sail up`.
 2. Start your local clientside server with `npm run dev`.
-3. Setup & seed your database with `php artisan migrate --seed`
+3. Setup & seed your database with `php artisan migrate --seed`.
 4. Access the application at `http://localhost`.
