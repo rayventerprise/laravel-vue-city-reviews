@@ -1,5 +1,6 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
+import CitySearchBar from "@/Components/CitySearchBar.vue";
 
 defineProps({
     canLogin: Boolean,
@@ -27,6 +28,9 @@ defineProps({
             <div class="flex flex-col items-center justify-center h-[400px]">
                 <img src="/logo.png" class="h-16 w-auto"/>
                 <div class="py-2">The best place to find your next vacation spot!</div>
+                <div>
+                    <CitySearchBar/>
+                </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="flex-grow bg-gray-200" v-for="city in cities">
