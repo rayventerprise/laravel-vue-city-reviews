@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 100);
             $table->string('slug', 100);
+            $table->string('thumbnail')->default('');
             $table->foreignId('state_id')->constrained();
             $table->unique(['name', 'state_id']);
             $table->boolean('is_featured')->default(false);

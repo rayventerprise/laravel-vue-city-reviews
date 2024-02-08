@@ -13,6 +13,7 @@ class HomeController extends Controller
     {
         $cities = City::where('is_featured', true)->get([
             'name',
+            'thumbnail',
             'slug',
         ]);
 
