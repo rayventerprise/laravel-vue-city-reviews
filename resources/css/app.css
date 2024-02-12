@@ -5,3 +5,26 @@
 [x-cloak] {
     display: none;
 }
+
+.app-layout {
+    @apply dark:bg-gray-900 dark:text-white;
+
+    input {
+        @apply dark:text-black;
+    }
+}
+
+.font-holian {
+    font-family: "Holian", serif;
+}
+
+@font-face {
+    font-family: Holian;
+    src: url("Holian-MVRee.otf") format("opentype");
+}
+
+
+.jumbotron {
+    background-image:  -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("/jumbotron.jpg");
+    background-size: cover;
+}

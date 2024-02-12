@@ -14,4 +14,9 @@ class City extends Model
     {
         return 'slug';
     }
+
+    public function state()
+    {
+        return $this->belongsTo(State::class);
+    }
 }

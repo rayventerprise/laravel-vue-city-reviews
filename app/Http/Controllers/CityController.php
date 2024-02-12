@@ -38,7 +38,6 @@ class CityController extends Controller
      */
     public function show(City $city)
     {
-
         return Inertia::render('City/Show', [
             'city' => $city
         ]);

@@ -13,12 +13,12 @@ class StateSeeder extends Seeder
      */
     public function run(): void
     {
-        $states = ['TX' => 'Texas', 'CA' => 'California', 'NY' => 'New York', 'FL' => 'Florida'];
+        $states = collect(json_decode(file_get_contents(database_path('seeders/states-cities-seed.json')), true))->keys();
 
-        foreach ($states as $abbreviation=>$state) {
+        foreach ($states as $state) {
             State::create([
                 'name' => $state,
-                'abbr' => $abbreviation,
+                'abbr' => '',
             ]);
         }
     }

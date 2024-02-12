@@ -21,7 +21,9 @@ class CityController extends Controller
         ]);
 
         $cities = City::query()
+            ->with('state')
             ->when(isset($props['name']), fn($q) => $q->where('name', 'like', '%'.$props['name'].'%'))
+            ->select(['id', 'name', 'slug', 'state_id'])
             ->paginate(20);
 
         return CityJson::collection($cities);
@@ -48,10 +50,6 @@ class CityController extends Controller
      */
     public function show(City $city)
     {
-
-        return Inertia::render('City/Show', [
-            'city' => $city
-        ]);
     }
 
     /**

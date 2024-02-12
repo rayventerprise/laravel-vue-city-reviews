@@ -2,7 +2,7 @@
     <img src="public/logo.png" width="300" alt="CityReviews Logo">
 </p>
 
-## City Reviews
+## Citify
 
 This application allows users to search for any city in the United States and give their review on it.
 
